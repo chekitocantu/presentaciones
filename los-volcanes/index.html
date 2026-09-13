@@ -40,22 +40,23 @@ html, body { height:100%; }
 .reveal ul li { margin:.35em 0; list-style:none; position:relative; padding-left:1.3em; }
 .reveal ul li::before { content:'▸'; position:absolute; left:0; color:var(--accent); font-weight:700; }
 .reveal a { color:var(--accent2); }
-/* imagenes de contenido: al lado del texto (el texto fluye a la izquierda) */
-.reveal .deck-img {
+/* imagenes de contenido (Markdown ![](url)): al lado del texto (fluye a la izquierda) */
+.reveal .slides section img {
   float:right; width:40%; max-width:40%; max-height:64vh;
   margin:.1em 0 .6em 1.1em; min-height:8em;
   border-radius:16px; box-shadow:0 18px 50px rgba(0,0,0,.55);
   border:1px solid rgba(255,255,255,.12); object-fit:cover;
-  /* mientras carga: panel de color (no blanco, no texto alt) */
+  /* mientras carga: panel de color (no blanco) */
   background:linear-gradient(135deg, var(--bg3), #4c1d95);
 }
-.reveal .deck-img.img-failed { display:none; }   /* si Pollinations falla, no dejar rota */
+.reveal .slides section img.img-failed { display:none; }  /* si Pollinations falla, ocultar (JS) */
+.reveal .slides section p:has(img) { margin:0; }          /* el <p> que envuelve la imagen no estorba */
 .reveal .slides section::after { content:''; display:block; clear:both; }  /* clearfix del float */
 /* portada: primer slide centrado (la imagen, si la hay, no flota) */
 .reveal .slides > section:first-child { text-align:center; }
 .reveal .slides > section:first-child h1 { margin-bottom:.2em; }
 .reveal .slides > section:first-child p { color:var(--muted); font-size:1.1em; }
-.reveal .slides > section:first-child .deck-img {
+.reveal .slides > section:first-child img {
   float:none; width:auto; max-width:70%; max-height:40vh; margin:.6em auto 0;
 }
 /* referencias APA7: sangria francesa */
@@ -72,58 +73,82 @@ html, body { height:100%; }
 <section data-markdown data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n--\r?\n$">
 <textarea data-template>
 # Los volcanes
-### Fenómenos que modelan la Tierra y condicionan la vida
----
-## ¿Qué es un volcán?
-- Un volcán es una abertura en la corteza por donde sale **magma**, gas y ceniza.
-- El magma que emerge a la superficie se llama **lava** y puede formar conos, domos o coladas.
-- Se clasifican como activos, dormidos o extintos según su historia eruptiva.
-- La Etna, en Sicilia, es uno de los volcanes activos más estudiados del mundo.
-
-<img class="deck-img" src="https://image.pollinations.ai/prompt/close-up%20photograph%20of%20an%20active%20volcanic%20crater%20with%20glowing%20orange%20lava%2C%20dark%20basalt%20rocks%2C%20and%20thin%20steam%20rising%20under%20dramatic%20side%20light?width=1024&height=768&nologo=true&model=flux&seed=20281" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
+### Fenómenos que moldean el planeta
 
 ---
-## ¿Por qué se forman?
-- La mayoría nace donde las **placas tectónicas** convergen, divergen o se separan.
-- En las zonas de subducción, el océano hunde placa y genera fusión en el manto.
-- En dorsales oceánicas, la separación de placas deja ascender magma basáltico.
-- Los puntos calientes, como Hawái, crean cadenas de islas volcánicas.
 
-<img class="deck-img" src="https://image.pollinations.ai/prompt/aerial%20photograph%20of%20a%20chain%20of%20dark%20volcanic%20islands%20in%20deep%20blue%20ocean%2C%20with%20a%20central%20active%20cone%20emitting%20a%20thin%20plume%20and%20sunlight%20glinting%20on%20the%20water?width=1024&height=768&nologo=true&model=flux&seed=93283" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
+## Qué es un volcán
+- Un **volcán** es una abertura donde sale magma, gas y ceniza.
+- El magma se convierte en **lava** al llegar a la superficie.
+- Su actividad depende de la profundidad y viscosidad del magma.
+- Puede ser activo, inactivo o extinto según su historial.
 
----
-## Tipos de erupción y forma del volcán
-- Las **erupciones explosivas** proyectan ceniza, bombas y fragmentos piroclásticos.
-- Las erupciones efusivas producen coladas fluidas típicas de volcanes escudo.
-- Los estratovolcanes combinan capas de lava y ceniza y suelen ser cónicos.
-- La viscosidad del magma y el contenido de gases controlan la violencia eruptiva.
+![](https://image.pollinations.ai/prompt/A%20close-up%20of%20a%20volcanic%20vent%20emitting%20red%20lava%20and%20dark%20smoke%20under%20a%20night%20sky%2C%20with%20rugged%20basalt%20rocks%20in%20the%20foreground.?width=1024&height=768&nologo=true&model=flux&seed=43185)
 
-<img class="deck-img" src="https://image.pollinations.ai/prompt/photograph%20of%20an%20explosive%20volcanic%20eruption%20with%20a%20tall%20ash%20column%2C%20steam%2C%20and%20dark%20basalt%20slopes%20under%20storm%20light?width=1024&height=768&nologo=true&model=flux&seed=64862" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
 
 ---
+
+## Por qué se forman
+- Se forman donde las placas tectónicas se separan, chocan o hay puntos calientes.
+- La **subducción** hunde placas y genera fusión en el manto.
+- Las dorsales oceánicas crean cadenas de islas volcánicas.
+- La presión de gases acelera la erupción.
+
+![](https://image.pollinations.ai/prompt/Aerial%20photograph%20of%20a%20volcanic%20island%20chain%20in%20a%20blue%20ocean%2C%20with%20white%20steam%20rising%20from%20dark%20rocky%20slopes%20and%20green%20vegetation.?width=1024&height=768&nologo=true&model=flux&seed=96950)
+
+
+---
+
+## Tipos de erupciones
+- Las **erupciones efusivas** vierten lava fluida con poca explosividad.
+- Las **explosivas** lanzan ceniza, piroclastos y gases a gran altura.
+- El índice VEI mide la magnitud de la erupción.
+- El tipo de magma determina el riesgo y el paisaje resultante.
+
+![](https://image.pollinations.ai/prompt/A%20dramatic%20volcanic%20ash%20plume%20rising%20above%20a%20crater%2C%20with%20dark%20clouds%20and%20scattered%20ash%20over%20a%20barren%20landscape%2C%20photographed%20from%20a%20distance.?width=1024&height=768&nologo=true&model=flux&seed=55307)
+
+
+---
+
 ## Riesgos y beneficios
-- Los **lahares**, flujos piroclásticos y la ceniza pueden destruir viviendas y afectar la aviación.
-- Las cenizas enriquecen suelos y favorecen la agricultura a mediano plazo.
-- El calor volcánico alimenta la **geotermia** y el turismo en regiones cercanas.
-- La proximidad a volcanes exige planes de evacuación y monitoreo continuo.
+- La **ceniza** puede dañar aviones, cultivos y respiración.
+- Los **lahares** son flujos de lodo volcánico muy rápidos.
+- Las erupciones generan gases que afectan el clima.
+- El suelo volcánico es fértil y hay geotermia.
 
-<img class="deck-img" src="https://image.pollinations.ai/prompt/aerial%20view%20of%20a%20village%20covered%20in%20gray%20volcanic%20ash%20after%20an%20eruption%2C%20with%20cracked%20roads%2C%20damaged%20roofs%2C%20and%20overcast%20light?width=1024&height=768&nologo=true&model=flux&seed=17109" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
+![](https://image.pollinations.ai/prompt/A%20river%20of%20muddy%20volcanic%20debris%20flowing%20down%20a%20steep%20slope%20after%20an%20eruption%2C%20with%20dark%20ash-covered%20ground%20and%20trees%20partially%20buried%20in%20soft%20daylight.?width=1024&height=768&nologo=true&model=flux&seed=85930)
 
----
-## Monitoreo y predicción
-- Se miden sismos, deformación del terreno, gases y temperatura de fumarolas.
-- Las redes de sensores permiten emitir alertas tempranas, aunque no una fecha exacta.
-- El **monitoreo** continuo reduce el riesgo para poblaciones cercanas.
-- Ejemplos: Alaska Volcano Observatory y el Global Volcanism Program.
-
-<img class="deck-img" src="https://image.pollinations.ai/prompt/field%20team%20with%20scientific%20instruments%20near%20a%20volcanic%20vent%2C%20steam%20rising%2C%20tripod%20and%20sensors%2C%20dawn%20light%20on%20dark%20rock?width=1024&height=768&nologo=true&model=flux&seed=2497" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
 
 ---
+
+## Cómo se monitorean
+- Se miden **sismos**, deformación y gases volcánicos.
+- Los sensores detectan cambios en la temperatura del terreno.
+- Las cámaras y satélites siguen nubes de ceniza y lava.
+- Los avisos tempranos permiten evacuar a tiempo.
+
+![](https://image.pollinations.ai/prompt/A%20volcano%20observatory%20with%20scientific%20instruments%20and%20a%20small%20building%20overlooking%20a%20smoking%20crater%2C%20with%20clear%20sky%20and%20rugged%20terrain.?width=1024&height=768&nologo=true&model=flux&seed=62810)
+
+
+---
+
+## Ejemplo: erupciones recientes
+- El **Etna** muestra actividad frecuente en Sicilia.
+- El Fuego en Guatemala produce flujos de lava recurrentes.
+- El Kilauea en Hawái genera erupciones efusivas.
+- El Vesuvio sigue siendo un riesgo para Nápoles.
+
+![](https://image.pollinations.ai/prompt/A%20wide%20view%20of%20a%20volcano%20with%20glowing%20lava%20flows%20descending%20its%20slopes%20at%20dusk%2C%20with%20a%20town%20visible%20in%20the%20distance%20and%20smoke%20rising%20from%20the%20summit.?width=1024&height=768&nologo=true&model=flux&seed=45982)
+
+
+---
+
 ## Referencias
 <div class="references">
-<p>Alaska Volcano Observatory. (2024). <em>Alaska Volcano Observatory</em>. <a href="https://www.avo.alaska.edu/">https://www.avo.alaska.edu/</a></p>
-<p>Smithsonian Institution. (2024). <em>Global Volcanism Program</em>. <a href="https://volcano.si.edu/">https://volcano.si.edu/</a></p>
-<p>United States Geological Survey. (2023). <em>Volcanic hazards</em>. <a href="https://volcanoes.usgs.gov/">https://volcanoes.usgs.gov/</a></p>
+<p>Casadevall, T. J., &amp; Simkin, T. A. (2010). <em>Volcanoes and human lives: Interface between large-scale disasters and small-scale experiences</em>. Elsevier.</p>
+<p>Global Volcanism Program. (2024). <em>Volcanoes of the World</em>. Smithsonian Institution. <a href="https://volcano.si.edu/">https://volcano.si.edu/</a></p>
+<p>Simkin, T. A., &amp; Siebert, L. (2005). <em>Encyclopedia of volcanoes</em>. Academic Press.</p>
+<p>United States Geological Survey. (2023). <em>Volcanoes: Overview</em>. <a href="https://volcanoes.usgs.gov/">https://volcanoes.usgs.gov/</a></p>
 </div>
 </textarea>
 </section>
@@ -135,7 +160,14 @@ html, body { height:100%; }
 <script>
 Reveal.initialize({ hash:true, slideNumber:'c/t', transition:'slide',
   progress:true, controls:true, center:false,
-  plugins:[ RevealMarkdown, RevealHighlight ] });
+  plugins:[ RevealMarkdown, RevealHighlight ] }).then(function() {
+  // Markdown ![](url) no permite onerror inline: engancharlo aqui. Si Pollinations
+  // no responde, ocultar la imagen (sin icono roto) en vez de dejar el hueco feo.
+  document.querySelectorAll('.reveal .slides section img').forEach(function(img) {
+    img.addEventListener('error', function() { img.classList.add('img-failed'); });
+    if (img.complete && img.naturalWidth === 0) img.classList.add('img-failed');
+  });
+});
 </script>
 </body>
 </html>
