@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Fotosíntesis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css" id="theme">
+<style>
+:root {
+  --bg1:#0f172a; --bg2:#1e1b4b; --bg3:#312e81;
+  --ink:#f8fafc; --muted:#c7d2fe; --accent:#a78bfa; --accent2:#38bdf8;
+}
+html, body { height:100%; }
+.reveal-viewport {
+  background: radial-gradient(1200px 800px at 15% 10%, var(--bg3) 0%, transparent 55%),
+              radial-gradient(1000px 700px at 90% 90%, #4c1d95 0%, transparent 50%),
+              linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 100%);
+}
+.reveal { font-family:'Inter',system-ui,sans-serif; color:var(--ink); font-size:30px; }
+.reveal .slides { text-align:left; }
+.reveal .slides section { padding:0 24px; }
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family:'Poppins',sans-serif; color:#fff; text-transform:none;
+  letter-spacing:-.01em; line-height:1.1; text-shadow:0 2px 18px rgba(0,0,0,.35);
+}
+.reveal h1 { font-size:2.4em; font-weight:800;
+  background:linear-gradient(90deg,#fff, var(--muted));
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.reveal h2 { font-size:1.5em; font-weight:700; margin-bottom:.5em;
+  border-left:6px solid var(--accent); padding-left:.5em; }
+.reveal p, .reveal li { color:var(--ink); line-height:1.45; }
+.reveal strong { color:var(--accent2); }
+.reveal em { color:var(--muted); }
+.reveal ul { display:block; margin-left:.2em; }
+.reveal ul li { margin:.35em 0; list-style:none; position:relative; padding-left:1.3em; }
+.reveal ul li::before { content:'▸'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.reveal a { color:var(--accent2); }
+/* imagenes de contenido */
+.reveal .deck-img {
+  display:block; margin:.6em auto 0; max-height:42vh; max-width:88%;
+  border-radius:16px; box-shadow:0 18px 50px rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.12); object-fit:cover;
+}
+/* portada: primer slide centrado */
+.reveal .slides > section:first-child { text-align:center; }
+.reveal .slides > section:first-child h1 { margin-bottom:.2em; }
+.reveal .slides > section:first-child p { color:var(--muted); font-size:1.1em; }
+/* referencias APA7: sangria francesa */
+.reveal .references { font-size:.62em; }
+.reveal .references p {
+  text-indent:-2.2em; padding-left:2.2em; margin:.55em 0; line-height:1.35;
+  color:var(--muted); text-align:left;
+}
+.reveal .slide-number { background:transparent; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+<section data-markdown data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n--\r?\n$">
+<textarea data-template>
+# La Fotosíntesis
+### Cómo las plantas hacen su alimento
+
+---
+
+## ¿Qué es?
+- Proceso que convierte luz en energía química
+- Ocurre en los cloroplastos
+<img class="deck-img" src="https://image.pollinations.ai/prompt/green%20plant%20leaf%20close%20up%20with%20sunlight%2C%20macro%20photography?width=1024&height=576&nologo=true&seed=2266" alt="green plant leaf close up with sunlight, macro photography" loading="lazy">
+
+---
+
+## Ecuación
+- CO2 + agua + luz
+- Produce glucosa y oxígeno
+<img class="deck-img" src="https://image.pollinations.ai/prompt/diagram%20of%20photosynthesis%20process%2C%20sun%20and%20green%20leaves?width=1024&height=576&nologo=true&seed=44045" alt="diagram of photosynthesis process, sun and green leaves" loading="lazy">
+
+---
+
+## Referencias
+<div class="references">
+<p>Taiz, L., &amp; Zeiger, E. (2010). <em>Plant physiology</em> (5th ed.). Sinauer Associates.</p>
+<p>Campbell, N. A. (2017). <em>Biology</em> (11th ed.). Pearson.</p>
+</div>
+</textarea>
+</section>
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css">
+<script>
+Reveal.initialize({ hash:true, slideNumber:'c/t', transition:'slide',
+  plugins:[ RevealMarkdown, RevealHighlight ] });
+</script>
+</body>
+</html>
