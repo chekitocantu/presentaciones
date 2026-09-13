@@ -1,121 +1,329 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>los agujeros negros</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css" id="theme">
-<style>
-:root {
-  --bg1:#0f172a; --bg2:#1e1b4b; --bg3:#312e81;
-  --ink:#f8fafc; --muted:#c7d2fe; --accent:#a78bfa; --accent2:#38bdf8;
-}
-html, body { height:100%; }
-.reveal-viewport {
-  background: radial-gradient(1200px 800px at 15% 10%, var(--bg3) 0%, transparent 55%),
-              radial-gradient(1000px 700px at 90% 90%, #4c1d95 0%, transparent 50%),
-              linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 100%);
-}
-.reveal { font-family:'Inter',system-ui,sans-serif; color:var(--ink); font-size:30px; }
-.reveal .slides { text-align:left; }
-.reveal .slides section { padding:0 24px; }
-.reveal h1, .reveal h2, .reveal h3 {
-  font-family:'Poppins',sans-serif; color:#fff; text-transform:none;
-  letter-spacing:-.01em; line-height:1.1; text-shadow:0 2px 18px rgba(0,0,0,.35);
-}
-.reveal h1 { font-size:2.4em; font-weight:800;
-  background:linear-gradient(90deg,#fff, var(--muted));
-  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
-.reveal h2 { font-size:1.5em; font-weight:700; margin-bottom:.5em;
-  border-left:6px solid var(--accent); padding-left:.5em; }
-.reveal p, .reveal li { color:var(--ink); line-height:1.45; }
-.reveal strong { color:var(--accent2); }
-.reveal em { color:var(--muted); }
-.reveal ul { display:block; margin-left:.2em; }
-.reveal ul li { margin:.35em 0; list-style:none; position:relative; padding-left:1.3em; }
-.reveal ul li::before { content:'▸'; position:absolute; left:0; color:var(--accent); font-weight:700; }
-.reveal a { color:var(--accent2); }
-/* imagenes de contenido */
-.reveal .deck-img {
-  display:block; margin:.6em auto 0; max-height:42vh; max-width:88%;
-  border-radius:16px; box-shadow:0 18px 50px rgba(0,0,0,.55);
-  border:1px solid rgba(255,255,255,.12); object-fit:cover;
-}
-/* portada: primer slide centrado */
-.reveal .slides > section:first-child { text-align:center; }
-.reveal .slides > section:first-child h1 { margin-bottom:.2em; }
-.reveal .slides > section:first-child p { color:var(--muted); font-size:1.1em; }
-/* referencias APA7: sangria francesa */
-.reveal .references { font-size:.62em; }
-.reveal .references p {
-  text-indent:-2.2em; padding-left:2.2em; margin:.55em 0; line-height:1.35;
-  color:var(--muted); text-align:left;
-}
-.reveal .slide-number { background:transparent; color:var(--muted); }
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="referrer" content="no-referrer">
+    <title>Los Agujeros Negros</title>
+    
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+    
+    <!-- Estilos Personalizados -->
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #05050a 0%, #150824 50%, #0a0a1a 100%);
+            --accent-cyan: #00f0ff;
+            --accent-magenta: #ff0055;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-main);
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .reveal .slides {
+            text-align: left;
+        }
+
+        .reveal h1, .reveal h2, .reveal h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .reveal h1 {
+            font-size: 3.5em;
+            background: -webkit-linear-gradient(45deg, var(--accent-cyan), var(--accent-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 0px 30px rgba(0, 240, 255, 0.2);
+            text-align: center;
+        }
+
+        .reveal h2 {
+            font-size: 2.2em;
+            color: #ffffff;
+            border-bottom: 3px solid var(--accent-magenta);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: var(--text-muted);
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .content-grid.reverse {
+            grid-template-columns: 1fr 1fr;
+            direction: rtl;
+        }
+
+        .content-grid.reverse > * {
+            direction: ltr;
+        }
+
+        .text-box {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .reveal ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reveal li {
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            line-height: 1.4;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .reveal li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--accent-cyan);
+            font-size: 0.9em;
+        }
+
+        .highlight {
+            color: var(--accent-cyan);
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+        }
+
+        .highlight-alt {
+            color: var(--accent-magenta);
+            font-weight: 700;
+        }
+
+        .img-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 0 2px rgba(0, 240, 255, 0.2);
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .img-container:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Formato APA 7 */
+        .apa-ref {
+            text-indent: -2em;
+            padding-left: 2em;
+            margin-bottom: 1.5em;
+            font-size: 0.75em;
+            line-height: 1.4;
+            color: var(--text-muted);
+        }
+        
+        .apa-ref i {
+            color: #fff;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .content-grid, .content-grid.reverse {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .img-container {
+                height: 250px;
+            }
+            .reveal h1 { font-size: 2.5em; }
+            .reveal h2 { font-size: 1.8em; }
+        }
+    </style>
 </head>
 <body>
-<div class="reveal"><div class="slides">
-<section data-markdown data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n--\r?\n$">
-<textarea data-template>
-# Agujeros negros
-### Enigmas del espacio
 
----
+    <div class="reveal">
+        <div class="slides">
 
-## ¿Qué son?
-- Regiones del espacio con gravedad extrema
-- Ni la luz puede escapar
-- Formados por colapso de estrellas masivas
-<img class="deck-img" src="https://image.pollinations.ai/prompt/A%20black%20hole%20silhouette%20with%20glowing%20accretion%20disk%20and%20gravitational%20lensing%2C%20deep%20space%20background%2C%20photographic%20style?width=1024&height=576&nologo=true&seed=15212" alt="A black hole silhouette with glowing accretion disk and gravitational lensing, deep space background, photographic style" loading="lazy">
+            <!-- Portada -->
+            <section>
+                <h1>Los Agujeros Negros</h1>
+                <p class="subtitle">El enigma más oscuro y fascinante del universo</p>
+            </section>
 
----
+            <!-- ¿Qué es? -->
+            <section>
+                <h2>¿Qué es un agujero negro?</h2>
+                <div class="content-grid">
+                    <div class="text-box">
+                        <ul>
+                            <li>Es una región del espacio donde la <span class="highlight">gravedad es tan extrema</span> que nada puede escapar de su atracción.</li>
+                            <li>Ni siquiera la <span class="highlight-alt">luz</span>, la entidad más rápida del universo, logra salir de él.</li>
+                            <li>Son el resultado de deformaciones masivas en el tejido del <span class="highlight">espacio-tiempo</span>, tal como predijo Albert Einstein.</li>
+                            <li>Contrario a su nombre, no están "vacíos", contienen una inmensa cantidad de materia concentrada en un área diminuta.</li>
+                        </ul>
+                    </div>
+                    <div class="img-container">
+                        <img alt="" src="https://image.pollinations.ai/prompt/realistic%20photograph%20of%20deep%20space%20with%20glowing%20stars%20and%20absolute%20dark%20void%20in%20the%20center%2C%20high%20resolution%20astrophotography?width=1024&height=768&nologo=true&seed=101">
+                    </div>
+                </div>
+            </section>
 
-## Tipos principales
-- Estelares: nacidos de estrellas
-- Supermasivos: en centros galácticos
-- Intermedios y primordiales: menos comunes
-<img class="deck-img" src="https://image.pollinations.ai/prompt/Comparison%20of%20stellar%20and%20supermassive%20black%20holes%20with%20glowing%20disks%2C%20cosmic%20scale%2C%20photographic%20style?width=1024&height=576&nologo=true&seed=49781" alt="Comparison of stellar and supermassive black holes with glowing disks, cosmic scale, photographic style" loading="lazy">
+            <!-- Formación -->
+            <section>
+                <h2>¿Cómo se forman?</h2>
+                <div class="content-grid reverse">
+                    <div class="text-box">
+                        <ul>
+                            <li>La mayoría nace tras la muerte de una <span class="highlight">estrella masiva</span> (al menos 10 veces el tamaño de nuestro sol).</li>
+                            <li>Al agotar su combustible nuclear, la estrella ya no puede soportar su propio peso y colapsa.</li>
+                            <li>Este colapso genera una explosión monumental conocida como <span class="highlight-alt">supernova</span>.</li>
+                            <li>El núcleo remanente se comprime infinitamente, creando una <span class="highlight">singularidad gravitacional</span>.</li>
+                        </ul>
+                    </div>
+                    <div class="img-container">
+                        <img alt="" src="https://image.pollinations.ai/prompt/realistic%20photograph%20of%20a%20massive%20supernova%20explosion%20in%20space%2C%20brilliant%20glowing%20colors%20expanding%2C%20astrophotography?width=1024&height=768&nologo=true&seed=102">
+                    </div>
+                </div>
+            </section>
 
----
+            <!-- Anatomía -->
+            <section>
+                <h2>Anatomía del Abismo</h2>
+                <div class="content-grid">
+                    <div class="text-box">
+                        <ul>
+                            <li><span class="highlight">Singularidad:</span> El punto central donde la densidad es infinita y las leyes de la física colapsan.</li>
+                            <li><span class="highlight-alt">Horizonte de sucesos:</span> La frontera invisible; el punto de no retorno. Una vez cruzado, escapar es imposible.</li>
+                            <li><span class="highlight">Disco de acreción:</span> Gas y polvo supercaliente que orbita a velocidades extremas, emitiendo radiación antes de caer.</li>
+                            <li><span class="highlight-alt">Chorros relativistas (Jets):</span> Partículas expulsadas a casi la velocidad de la luz desde los polos magnéticos.</li>
+                        </ul>
+                    </div>
+                    <div class="img-container">
+                        <img alt="" src="https://image.pollinations.ai/prompt/realistic%20photograph%20of%20a%20glowing%20accretion%20disk%20of%20hot%20gas%20swirling%20in%20space%2C%20cinematic%20lighting%2C%20astrophotography?width=1024&height=768&nologo=true&seed=103">
+                    </div>
+                </div>
+            </section>
 
-## Evidencia y observación
-- Órbitas de estrellas cercanas al centro galáctico
-- Ondas gravitacionales detectadas por LIGO
-- Imagen directa de M87* por EHT
-<img class="deck-img" src="https://image.pollinations.ai/prompt/Event%20Horizon%20Telescope%20array%20and%20black%20hole%20image%20with%20bright%20ring%2C%20scientific%20observation%2C%20photographic%20style?width=1024&height=576&nologo=true&seed=22273" alt="Event Horizon Telescope array and black hole image with bright ring, scientific observation, photographic style" loading="lazy">
+            <!-- Tipos -->
+            <section>
+                <h2>Clasificación</h2>
+                <div class="content-grid reverse">
+                    <div class="text-box">
+                        <ul>
+                            <li><span class="highlight">Estelares:</span> Los más comunes. Tienen entre 3 y decenas de veces la masa de nuestro Sol.</li>
+                            <li><span class="highlight-alt">Supermasivos:</span> Contienen millones a miles de millones de masas solares. Residen en el centro de casi todas las galaxias.</li>
+                            <li><span class="highlight">Intermedios:</span> El eslabón perdido. Masas entre cientos y miles de soles; difíciles de detectar.</li>
+                            <li><span class="highlight-alt">Primordiales:</span> Teóricos. Formados instantes después del Big Bang, podrían ser del tamaño de un átomo.</li>
+                        </ul>
+                    </div>
+                    <div class="img-container">
+                        <img alt="" src="https://image.pollinations.ai/prompt/realistic%20photograph%20of%20a%20dense%20galaxy%20cluster%20glowing%20brightly%20in%20the%20dark%20universe%2C%20hubble%20telescope%20style?width=1024&height=768&nologo=true&seed=104">
+                    </div>
+                </div>
+            </section>
 
----
+            <!-- Detección -->
+            <section>
+                <h2>¿Cómo los detectamos?</h2>
+                <div class="content-grid">
+                    <div class="text-box">
+                        <ul>
+                            <li>No podemos verlos directamente porque no emiten luz, pero observamos su <span class="highlight">efecto en el entorno</span>.</li>
+                            <li><span class="highlight-alt">Rayos X:</span> Emitidos por el material del disco de acreción al calentarse a millones de grados.</li>
+                            <li><span class="highlight">Ondas Gravitacionales:</span> Ondulaciones en el espacio-tiempo creadas cuando dos agujeros negros colisionan.</li>
+                            <li><span class="highlight-alt">Movimiento estelar:</span> Estrellas orbitando a gran velocidad alrededor de un punto oscuro masivo (ej. Sagitario A*).</li>
+                        </ul>
+                    </div>
+                    <div class="img-container">
+                        <img alt="" src="https://image.pollinations.ai/prompt/realistic%20photograph%20of%20a%20large%20modern%20astronomical%20observatory%20telescope%20dome%20at%20night%20under%20a%20starry%20sky?width=1024&height=768&nologo=true&seed=105">
+                    </div>
+                </div>
+            </section>
 
-## Efectos y paradojas
-- Dilatación del tiempo cerca del horizonte
-- Radiación de Hawking teórica
-- Paradoja de la información cuántica
-<img class="deck-img" src="https://image.pollinations.ai/prompt/Spacetime%20curvature%20around%20a%20black%20hole%20with%20light%20bending%20and%20time%20distortion%2C%20dramatic%20cosmic%20scene%2C%20photographic%20style?width=1024&height=576&nologo=true&seed=16743" alt="Spacetime curvature around a black hole with light bending and time distortion, dramatic cosmic scene, photographic style" loading="lazy">
+            <!-- Referencias -->
+            <section>
+                <h2>Referencias</h2>
+                <div class="text-box" style="margin-top: 30px;">
+                    <div class="apa-ref">
+                        Abbott, B. P. et al. (LIGO Scientific Collaboration). (2016). <i>Observation of Gravitational Waves from a Binary Black Hole Merger</i>. Physical Review Letters, 116(6), 061102. https://doi.org/10.1103/PhysRevLett.116.061102
+                    </div>
+                    <div class="apa-ref">
+                        Event Horizon Telescope Collaboration. (2019). <i>First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole</i>. The Astrophysical Journal Letters, 875(1), L1. https://doi.org/10.3847/2041-8213/ab0ec7
+                    </div>
+                    <div class="apa-ref">
+                        Hawking, S. W. (1988). <i>Historia del tiempo: Del big bang a los agujeros negros</i>. Crítica.
+                    </div>
+                    <div class="apa-ref">
+                        NASA. (2023). <i>Black Holes</i>. NASA Science. Recuperado de https://science.nasa.gov/astrophysics/focus-areas/black-holes
+                    </div>
+                </div>
+            </section>
 
----
+        </div>
+    </div>
 
-## Referencias
-<div class="references">
-<p>Event Horizon Telescope. (2019). <em>First image of a black hole</em>. Event Horizon Telescope. <a href="https://www.eventhorizontelescope.org/news/first-image-black-hole">https://www.eventhorizontelescope.org/news/first-image-black-hole</a></p>
-<p>NASA. (2023). <em>Black holes</em>. NASA. <a href="https://science.nasa.gov/universe/black-holes/">https://science.nasa.gov/universe/black-holes/</a></p>
-<p>Hawking, S. (1974). <em>Black hole explosions?</em> Nature, 248, 30-31. <a href="https://www.nature.com/articles/248030a0">https://www.nature.com/articles/248030a0</a></p>
-<p>Schödel, R. (2005). <em>The galactic center</em>. Annual Review of Astronomy and Astrophysics, 43, 55-86. <a href="https://doi.org/10.1146/annurev.astro.43.081903.175504">https://doi.org/10.1146/annurev.astro.43.081903.175504</a></p>
-</div>
-</textarea>
-</section>
-</div></div>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css">
+    <!-- Reveal.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: 'c/t',
+            progress: true,
+            transition: 'fade',
+            backgroundTransition: 'fade'
+        });
+    </script>
+    
 <script>
-Reveal.initialize({ hash:true, slideNumber:'c/t', transition:'slide',
-  plugins:[ RevealMarkdown, RevealHighlight ] });
+Reveal.on('ready', armImgs); Reveal.on('slidechanged', function(e){ load(e.currentSlide); load(e.currentSlide.nextElementSibling); });
+function armImgs(){ document.querySelectorAll('.reveal .slides section img').forEach(function(i){ if(i.src){ i.dataset.src=i.src; i.removeAttribute('src'); } }); load(Reveal.getCurrentSlide()); var s=document.querySelectorAll('.reveal .slides section'); if(s[1]) load(s[1]); }
+function load(sec){ if(!sec) return; sec.querySelectorAll('img[data-src]').forEach(function(img){ var url=img.dataset.src; img.removeAttribute('data-src'); var t=0; img.addEventListener('error',function(){ if(t++<6){ setTimeout(function(){ img.src=''; img.src=url; }, 1200*t); } else { img.style.display='none'; } }); img.src=url; }); }
 </script>
 </body>
 </html>
