@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>Los Delfines: Maravillas del Oceano</title>
+
+  <!-- Reveal.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #071330 0%, #0c2b4e 50%, #174872 100%);
+      --accent-teal: #00f2fe;
+      --accent-blue: #4facfe;
+      --text-main: #f0f8ff;
+      --text-muted: #b0c4de;
+      --card-bg: rgba(255, 255, 255, 0.07);
+      --card-border: rgba(0, 242, 254, 0.2);
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #071330;
+      color: var(--text-main);
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .reveal {
+      background: var(--bg-gradient);
+    }
+
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slides section {
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Headings & Text Contrast */
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      color: #ffffff;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-transform: none;
+      margin-bottom: 0.5em;
+    }
+
+    .reveal h1 {
+      font-size: 2.8rem;
+      background: linear-gradient(90deg, #ffffff, var(--accent-teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .reveal h2 {
+      font-size: 2.1rem;
+      border-left: 5px solid var(--accent-teal);
+      padding-left: 15px;
+    }
+
+    .reveal p, .reveal li {
+      color: var(--text-main);
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .reveal strong {
+      color: var(--accent-teal);
+      font-weight: 600;
+    }
+
+    /* Grid Layouts */
+    .slide-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    /* Bullet list styling */
+    ul.custom-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.custom-list li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 14px;
+    }
+
+    ul.custom-list li::before {
+      content: "•";
+      position: absolute;
+      left: 5px;
+      top: -2px;
+      color: var(--accent-teal);
+      font-size: 1.6rem;
+    }
+
+    /* Image styling */
+    .img-box {
+      width: 100%;
+      height: 380px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Cover Slide */
+    .cover-slide {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cover-subtitle {
+      font-size: 1.4rem;
+      color: var(--accent-teal);
+      font-weight: 300;
+      margin-bottom: 25px;
+    }
+
+    .cover-img {
+      width: 70%;
+      max-width: 650px;
+      height: 300px;
+      margin: 20px auto 0;
+    }
+
+    /* APA References */
+    .apa-ref {
+      font-size: 0.95rem !important;
+      padding-left: 2em;
+      text-indent: -2em;
+      margin-bottom: 16px !important;
+      line-height: 1.5;
+    }
+
+    .apa-ref em {
+      color: var(--accent-teal);
+      font-style: italic;
+    }
+
+    .apa-ref a {
+      color: var(--accent-blue);
+      text-decoration: underline;
+    }
+
+    /* Controls & Progress bar */
+    .reveal .controls {
+      color: var(--accent-teal);
+    }
+
+    .reveal .progress span {
+      background: var(--accent-teal);
+    }
+
+    /* Responsive adjustment */
+    @media (max-width: 768px) {
+      .slide-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      .img-box {
+        height: 220px;
+      }
+      .reveal h1 { font-size: 2rem; }
+      .reveal h2 { font-size: 1.5rem; }
+      .reveal p, .reveal li { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- SLIDE 1: Portada -->
+      <section class="cover-slide">
+        <h1>Los Delfines</h1>
+        <div class="cover-subtitle">Inteligencia, Adaptación y Vida en los Océanos</div>
+        <div class="img-box cover-img">
+          <img src="https://image.pollinations.ai/prompt/photograph%20of%20a%20wild%20bottlenose%20dolphin%20leaping%20out%20of%20crystal%20clear%20blue%20ocean%20water%20sunlight?width=1024&height=768&nologo=true&seed=101" alt="">
+        </div>
+      </section>
+
+      <!-- SLIDE 2: Introducción y Taxonomía -->
+      <section>
+        <h2>1. Biología y Taxonomía</h2>
+        <div class="slide-grid">
+          <div class="card">
+            <ul class="custom-list">
+              <li>Pertenecen a la familia <strong>Delphinidae</strong>, el grupo más diverso de cetáceos odontocetos.</li>
+              <li>Existen más de <strong>40 especies</strong> repartidas en entornos marinos y dulceacuícolas.</li>
+              <li>Respiren aire atmosférico mediante su <strong>espiráculo</strong> ubicado en la parte superior de la cabeza.</li>
+              <li>Su cuerpo hidrodinámico les permite alcanzar velocidades de hasta <strong>30 km/h</strong>.</li>
+            </ul>
+          </div>
+          <div class="img-box">
+            <img src="https://image.pollinations.ai/prompt/photograph%20of%20a%20pod%20of%20dolphins%20swimming%20underwater%20in%20deep%20blue%20ocean%20sunbeams?width=1024&height=768&nologo=true&seed=202" alt="">
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: Inteligencia y Ecolocalización -->
+      <section>
+        <h2>2. Inteligencia y Ecolocalización</h2>
+        <div class="slide-grid">
+          <div class="img-box">
+            <img src="https://image.pollinations.ai/prompt/photograph%20close%20up%20of%20a%20dolphin%20looking%20at%20camera%20underwater%20clear%20water?width=1024&height=768&nologo=true&seed=303" alt="">
+          </div>
+          <div class="card">
+            <ul class="custom-list">
+              <li><strong>Ecolocalización:</strong> Emiten chasquidos de alta frecuencia que rebotan para mapear su entorno en 3D.</li>
+              <li> Poseen una de las <strong>masas cerebrales relativas más altas</strong> entre los mamíferos.</li>
+              <li>Demuestran <strong>autoconciencia</strong> al reconocer su reflejo en espejos.</li>
+              <li>Utilizan <strong>silbidos firma únicos</strong> que actúan como sus nombres individuales.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: Comportamiento Social -->
+      <section>
+        <h2>3. Vida Social y Complejidad</h2>
+        <div class="slide-grid">
+          <div class="card">
+            <ul class="custom-list">
+              <li>Viven en grupos dinámicos conocidos como <strong>vainas o pods</strong> con complejas redes sociales.</li>
+              <li>Practican el <strong>altruismo intra e interespecífico</strong>, ayudando a individuos heridos o de otras especies.</li>
+              <li>Demuestran <strong>transmisión cultural</strong>: enseñan el uso de esponjas marinas como herramientas a sus crías.</li>
+              <li>Desarrollan lazos afectivos duraderos y juegos en equipo.</li>
+            </ul>
+          </div>
+          <div class="img-box">
+            <img src="https://image.pollinations.ai/prompt/photograph%20of%20dolphins%20swimming%20together%20synchronised%20near%20the%20surface%20of%20tropical%20sea?width=1024&height=768&nologo=true&seed=404" alt="">
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: Hábitat y Alimentación -->
+      <section>
+        <h2>4. Hábitat y Estrategias de Caza</h2>
+        <div class="slide-grid">
+          <div class="img-box">
+            <img src="https://image.pollinations.ai/prompt/photograph%20of%20a%20dolphin%20hunting%20fish%20in%20ocean%20reef%20action%20shot?width=1024&height=768&nologo=true&seed=505" alt="">
+          </div>
+          <div class="card">
+            <ul class="custom-list">
+              <li>Habitan desde aguas <strong>tropicales y templadas</strong> hasta grandes ríos (como el delfín rosado del Amazonas).</li>
+              <li>Son carnívoros; su dieta se basa en <strong>peces, calamares y crustáceos</strong>.</li>
+              <li>Emplean <strong>caza cooperativa</strong>: acorralan bancos de peces mediante "anillos de barro" o redes de burbujas.</li>
+              <li>Consumen diariamente entre el <strong>4% y 9% de su peso corporal</strong>.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: Amenazas y Conservación -->
+      <section>
+        <h2>5. Amenazas y Conservación</h2>
+        <div class="slide-grid">
+          <div class="card">
+            <ul class="custom-list">
+              <li><strong>Captura accidental:</strong> Las redes de pesca comercial causan la muerte de miles cada año.</li>
+              <li><strong>Contaminación marina:</strong> Los plásticos y pesticidas afectan severamente su sistema inmune.</li>
+              <li><strong>Contaminación acústica:</strong> El tráfico marítimo desorienta su sistema de ecolocalización.</li>
+              <li>Proyectos de <strong>protección internacional</strong> buscan crear áreas marinas protegidas para defender sus rutas.</li>
+            </ul>
+          </div>
+          <div class="img-box">
+            <img src="https://image.pollinations.ai/prompt/photograph%20of%20a%20majestic%20dolphin%20silhouetted%20against%20sunset%20sea%20surface?width=1024&height=768&nologo=true&seed=606" alt="">
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: Referencias APA 7 -->
+      <section>
+        <h2>Referencias</h2>
+        <div class="card" style="margin-top: 20px;">
+          <p class="apa-ref">
+            Connor, R. C., & Mann, J. (2006). Social evolution in toothed whales. En E. A. Norberg (Ed.), <em>Marine Mammal Biology: Evolutionary Ecology</em> (pp. 145–172). Academic Press.
+          </p>
+          <p class="apa-ref">
+            Marino, L. (2002). Convergence of complex cognitive abilities in cetaceans and primates. <em>Brain, Behavior and Evolution</em>, 59(1-2), 21-32. <a href="https://doi.org/10.1159/000063731" target="_blank">https://doi.org/10.1159/000063731</a>
+          </p>
+          <p class="apa-ref">
+            Pack, A. A., & Herman, L. M. (1995). Sensory integration in the bottlenose dolphin: Immediate visual recognition of objects felt echolocatively. <em>The Journal of the Acoustical Society of America</em>, 98(2), 722-733.
+          </p>
+          <p class="apa-ref">
+            World Wildlife Fund. (2021). <em>Dolphins: Species, threats and conservation actions</em>. WWF Reports. <a href="https://www.worldwildlife.org/species/dolphin" target="_blank">https://www.worldwildlife.org/species/dolphin</a>
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js Script -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      progress: true
+    });
+  </script>
+
+  <!-- Reliable Image Loader Script -->
+  <script>
+  Reveal.on('ready', armImgs); Reveal.on('slidechanged', function(e){ load(e.currentSlide); load(e.currentSlide.nextElementSibling); });
+  function armImgs(){ document.querySelectorAll('.reveal .slides section img').forEach(function(i){ if(i.src){ i.dataset.src=i.src; i.removeAttribute('src'); } }); load(Reveal.getCurrentSlide()); var s=document.querySelectorAll('.reveal .slides section'); if(s[1]) load(s[1]); }
+  function load(sec){ if(!sec) return; sec.querySelectorAll('img[data-src]').forEach(function(img){ var url=img.dataset.src; img.removeAttribute('data-src'); var t=0; img.addEventListener('error',function(){ if(t++<6){ setTimeout(function(){ img.src=''; img.src=url; }, 1200*t); } else { img.style.display='none'; } }); img.src=url; }); }
+  </script>
+
+</body>
+</html>
