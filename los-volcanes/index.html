@@ -43,9 +43,11 @@ html, body { height:100%; }
 /* imagenes de contenido: al lado del texto (el texto fluye a la izquierda) */
 .reveal .deck-img {
   float:right; width:40%; max-width:40%; max-height:64vh;
-  margin:.1em 0 .6em 1.1em;
+  margin:.1em 0 .6em 1.1em; min-height:8em;
   border-radius:16px; box-shadow:0 18px 50px rgba(0,0,0,.55);
   border:1px solid rgba(255,255,255,.12); object-fit:cover;
+  /* mientras carga: panel de color (no blanco, no texto alt) */
+  background:linear-gradient(135deg, var(--bg3), #4c1d95);
 }
 .reveal .deck-img.img-failed { display:none; }   /* si Pollinations falla, no dejar rota */
 .reveal .slides section::after { content:''; display:block; clear:both; }  /* clearfix del float */
@@ -70,60 +72,48 @@ html, body { height:100%; }
 <section data-markdown data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n--\r?\n$">
 <textarea data-template>
 # Los volcanes
-### Fenómenos que destruyen y construyen la Tierra
-
+### Fenómenos que modelan la Tierra y condicionan la vida
 ---
-
-## Qué es un volcán
-- Un **volcán** es una abertura en la corteza terrestre por donde sale magma.
-- El magma se convierte en lava al llegar a la superficie.
-- Puede expulsar gases, cenizas y fragmentos rocosos.
-- Su actividad depende del tipo de placa tectónica.
-<img class="deck-img" src="https://image.pollinations.ai/prompt/A%20volcanic%20crater%20at%20dawn%20with%20steam%20rising%20from%20a%20rocky%20rim%2C%20dramatic%20side%20lighting%2C%20no%20people?width=1024&height=768&nologo=true&model=flux&seed=55376" alt="A volcanic crater at dawn with steam rising from a rocky rim, dramatic side lighting, no people" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
-
+## Qué es un volcán: estructura y origen
+- Un **volcán** es una apertura en la corteza por donde sale **magma** del interior terrestre.
+- Se forma sobre zonas de subducción, dorsales oceánicas o puntos calientes.
+- Incluye cámara magmática, conducto, cráter y cono volcánico.
+- La presión de gases y la ascensión del magma desencadenan la erupción.
+<img class="deck-img" src="https://image.pollinations.ai/prompt/aerial%20photograph%20of%20an%20active%20volcanic%20crater%20with%20glowing%20lava%20in%20the%20center%2C%20dark%20rock%20walls%2C%20steam%20rising%2C%20dramatic%20daylight?width=1024&height=768&nologo=true&model=flux&seed=56613" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
 ---
-
-## Cómo ocurre una erupción
-- La presión del magma y los gases fuerza la roca hacia arriba.
-- La viscosidad del magma determina si el flujo es suave o explosivo.
-- Las erupciones efusivas emiten coladas; las explosivas lanzan **tefras**.
-- El tipo de erupción depende de la composición y la cantidad de gas.
-<img class="deck-img" src="https://image.pollinations.ai/prompt/An%20explosive%20volcanic%20eruption%20at%20night%20with%20glowing%20lava%20fragments%20rising%20above%20a%20dark%20cone%2C%20thick%20smoke%20plume%2C%20dramatic%20low-angle%20light%2C%20no%20people?width=1024&height=768&nologo=true&model=flux&seed=14209" alt="An explosive volcanic eruption at night with glowing lava fragments rising above a dark cone, thick smoke plume, dramatic low-angle light, no people" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
-
+## Tipos de erupción y formas volcánicas
+- Los **estratovolcanes** producen erupciones explosivas con ceniza y lava viscosa.
+- Los **escudos** emiten lava fluida y flujos extensos de baja explosividad.
+- Los domos crecen por lava espesa que se solidifica cerca del conducto.
+- La composición del magma y el contenido de gases definen el estilo eruptivo.
+<img class="deck-img" src="https://image.pollinations.ai/prompt/photograph%20of%20a%20steep%20stratovolcano%20with%20layered%20ash%20and%20lava%20flows%2C%20a%20broad%20shield%20volcano%20in%20the%20background%2C%20clear%20sky%2C%20natural%20light?width=1024&height=768&nologo=true&model=flux&seed=20185" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
 ---
-
-## Tipos de volcanes
-- Los **estratovolcanes** son altos y con erupciones violentas.
-- Los **escudos** tienen coladas fluidas y pendientes suaves.
-- Las **calderas** se forman por colapso tras grandes erupciones.
-- Los domos y conos de ceniza son formas menores.
-<img class="deck-img" src="https://image.pollinations.ai/prompt/A%20layered%20stratovolcano%20with%20a%20snow-capped%20peak%20and%20a%20broad%20shield%20volcano%20in%20the%20background%20under%20clear%20blue%20sky%2C%20morning%20light%2C%20no%20people?width=1024&height=768&nologo=true&model=flux&seed=17967" alt="A layered stratovolcano with a snow-capped peak and a broad shield volcano in the background under clear blue sky, morning light, no people" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
-
+## Riesgos volcánicos y monitoreo
+- Las **cenizas**, lahares, gases y flujos piroclásticos son amenazas directas.
+- El **monitoreo** usa sismos, deformación del terreno y emisiones de gases.
+- Las alertas permiten evacuar y proteger infraestructuras críticas.
+- La distancia al cráter y la exposición de la población determinan el nivel de riesgo.
+<img class="deck-img" src="https://image.pollinations.ai/prompt/photograph%20of%20a%20barren%20volcanic%20slope%20with%20small%20sensor%20poles%2C%20steam%20vents%2C%20scattered%20dark%20ash%2C%20morning%20light?width=1024&height=768&nologo=true&model=flux&seed=7573" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
 ---
-
-## Peligros y riesgos
-- Las **lahares** son flujos de ceniza y agua que destruyen valles.
-- Las cenizas pueden dañar aviones, cultivos y sistemas respiratorios.
-- Los gases volcánicos pueden ser tóxicos a gran concentración.
-- El riesgo depende de la población, el terreno y la distancia.
-<img class="deck-img" src="https://image.pollinations.ai/prompt/A%20volcanic%20mudflow%20of%20gray%20ash%20and%20water%20rushing%20through%20a%20forested%20valley%2C%20wet%20debris%20covering%20trees%2C%20overcast%20light%2C%20no%20people?width=1024&height=768&nologo=true&model=flux&seed=98750" alt="A volcanic mudflow of gray ash and water rushing through a forested valley, wet debris covering trees, overcast light, no people" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
-
+## Beneficios de la actividad volcánica
+- Las **cenizas** enriquecen suelos y favorecen la agricultura en zonas cercanas.
+- El **geotermismo** ofrece energía limpia y calor para comunidades enteras.
+- La erosión volcánica crea paisajes, minerales y recursos económicos.
+- La actividad volcánica participa en el ciclo global de elementos químicos.
+<img class="deck-img" src="https://image.pollinations.ai/prompt/photograph%20of%20fertile%20green%20fields%20near%20a%20volcanic%20mountain%2C%20morning%20mist%2C%20sunlight%2C%20no%20people?width=1024&height=768&nologo=true&model=flux&seed=54681" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
 ---
-
-## Beneficios y monitoreo
-- Las cenizas enriquecen suelos y favorecen la **agricultura**.
-- El calor volcánico puede usarse para energía geotérmica.
-- Los volcanes generan minerales y paisajes de alto valor turístico.
-- Se monitorean con sismómetros, GPS y satélites para emitir alertas.
-<img class="deck-img" src="https://image.pollinations.ai/prompt/A%20geothermal%20field%20with%20steam%20vents%20near%20a%20volcanic%20lake%2C%20colorful%20mineral%20deposits%2C%20morning%20mist%2C%20no%20people?width=1024&height=768&nologo=true&model=flux&seed=64029" alt="A geothermal field with steam vents near a volcanic lake, colorful mineral deposits, morning mist, no people" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
-
+## Ejemplo reciente y lecciones
+- El volcán **Cumbre Vieja** en La Palma generó flujos de lava y evacuaciones en 2021.
+- El **monitoreo** anticipó la crisis y redujo pérdidas humanas.
+- Las cenizas afectaron aviones, cultivos y redes eléctricas.
+- La gestión combinó ciencia, comunicación y planes de emergencia.
+<img class="deck-img" src="https://image.pollinations.ai/prompt/aerial%20photograph%20of%20dark%20lava%20flows%20crossing%20a%20coastal%20landscape%20near%20a%20volcano%2C%20smoke%20rising%2C%20overcast%20light%2C%20no%20people?width=1024&height=768&nologo=true&model=flux&seed=55989" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add(&quot;img-failed&quot;)">
 ---
-
 ## Referencias
 <div class="references">
-<p>USGS. (2023). <em>Volcanoes: How do volcanoes form?</em> U.S. Geological Survey. <a href="https://volcanoes.usgs.gov/hazards/volcanoes/">https://volcanoes.usgs.gov/hazards/volcanoes/</a></p>
-<p>Smithsonian Institution. (2024). <em>Volcanoes</em>. National Museum of Natural History. <a href="https://naturalhistory.si.edu/explore/volcanoes">https://naturalhistory.si.edu/explore/volcanoes</a></p>
-<p>National Geographic. (2023). <em>Volcanoes</em>. National Geographic. <a href="https://www.nationalgeographic.com/environment/article/volcano">https://www.nationalgeographic.com/environment/article/volcano</a></p>
+<p>National Geographic. (2022). <em>Volcanoes</em>. National Geographic. <a href="https://www.nationalgeographic.com/science/earth/volcanoes/">https://www.nationalgeographic.com/science/earth/volcanoes/</a></p>
+<p>Smithsonian Institution. (2024). <em>Global Volcanism Program</em>. Smithsonian Institution. <a href="https://volcanoes.si.edu/">https://volcanoes.si.edu/</a></p>
+<p>United States Geological Survey. (2023). <em>Volcanoes</em>. U.S. Geological Survey. <a href="https://www.usgs.gov/volcanoes">https://www.usgs.gov/volcanoes</a></p>
 </div>
 </textarea>
 </section>
