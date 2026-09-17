@@ -1,1 +1,191 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>el sistema solar</title><style>html,body{margin:0;height:100%}embed{width:100%;height:100%;border:0}</style></head><body><embed src="presentacion.pdf" type="application/pdf"></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- sin Referer: Pollinations puede rechazar/variar la respuesta segun el origen -->
+<meta name="referrer" content="no-referrer">
+<title>el sistema solar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css" id="theme">
+<style>
+:root {
+  --bg1:#0f172a; --bg2:#1e1b4b; --bg3:#312e81;
+  --ink:#f8fafc; --muted:#c7d2fe; --accent:#a78bfa; --accent2:#38bdf8;
+}
+:root{--accent:hsl(217,80%,72%);--accent2:hsl(262,85%,64%);--muted:hsl(217,40%,82%);--bg3:hsl(217,48%,24%);}
+html, body { height:100%; }
+.reveal-viewport {
+  background: radial-gradient(1200px 800px at 15% 10%, var(--bg3) 0%, transparent 55%),
+              radial-gradient(1000px 700px at 90% 90%, #4c1d95 0%, transparent 50%),
+              linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 100%);
+}
+.reveal { font-family:'Inter',system-ui,sans-serif; color:var(--ink); font-size:30px; }
+.reveal .slides { text-align:left; }
+.reveal .slides section { padding:0 24px; }
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family:'Poppins',sans-serif; color:#fff; text-transform:none;
+  letter-spacing:-.01em; line-height:1.1; text-shadow:0 2px 18px rgba(0,0,0,.35);
+}
+.reveal h1 { font-size:2.4em; font-weight:800;
+  background:linear-gradient(90deg,#fff, var(--muted));
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.reveal h2 { font-size:1.5em; font-weight:700; margin-bottom:.5em;
+  border-left:6px solid var(--accent); padding-left:.5em; }
+.reveal p, .reveal li { color:var(--ink); line-height:1.45; }
+.reveal strong { color:var(--accent2); }
+.reveal em { color:var(--muted); }
+.reveal ul { display:block; margin-left:.2em; }
+.reveal ul li { margin:.35em 0; list-style:none; position:relative; padding-left:1.3em; }
+.reveal ul li::before { content:'▸'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+.reveal a { color:var(--accent2); }
+/* imagenes de contenido (Markdown ![](url)): al lado del texto (fluye a la izquierda) */
+.reveal .slides section img {
+  float:right; width:40%; max-width:40%; max-height:64vh;
+  margin:.1em 0 .6em 1.1em; min-height:8em;
+  border-radius:16px; box-shadow:0 18px 50px rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.12); object-fit:cover;
+  /* mientras carga: panel de color (no blanco) */
+  background:linear-gradient(135deg, var(--bg3), #4c1d95);
+}
+.reveal .slides section img.img-failed { display:none; }  /* si Pollinations falla, ocultar (JS) */
+.reveal .slides section p:has(img) { margin:0; }          /* el <p> que envuelve la imagen no estorba */
+.reveal .slides section::after { content:''; display:block; clear:both; }  /* clearfix del float */
+/* portada: primer slide centrado (la imagen, si la hay, no flota) */
+.reveal .slides > section:first-child { text-align:center; }
+.reveal .slides > section:first-child h1 { margin-bottom:.2em; }
+.reveal .slides > section:first-child p { color:var(--muted); font-size:1.1em; }
+.reveal .slides > section:first-child img {
+  float:none; width:auto; max-width:70%; max-height:40vh; margin:.6em auto 0;
+}
+/* referencias APA7: sangria francesa */
+.reveal .references { font-size:.62em; }
+.reveal .references p {
+  text-indent:-2.2em; padding-left:2.2em; margin:.55em 0; line-height:1.35;
+  color:var(--muted); text-align:left;
+}
+.reveal .slide-number { background:transparent; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+<section data-markdown data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n--\r?\n$">
+<textarea data-template>
+# El Sistema Solar
+### Un viaje por nuestro vecindario cósmico
+
+---
+
+## Componentes Principales
+- El **Sol**: la estrella central, fuente de energía y gravedad dominante.
+- **Planetas**: ocho cuerpos celestes principales orbitando el Sol.
+- **Cuerpos menores**: asteroides, cometas y planetas enanos.
+- **Medio interplanetario**: polvo, gas y partículas energéticas.
+
+![](https://image.pollinations.ai/prompt/a%20realistic%20photo%20of%20the%20sun%20with%20solar%20flares%2C%20planets%20in%20orbit%2C%20and%20asteroid%20belts%2C%20dark%20space%20background?width=1024&height=768&nologo=true&seed=87832)
+
+
+---
+
+## Los Planetas Interiores
+- **Rocosos** y densos: Mercurio, Venus, Tierra y Marte.
+- Cercanos al Sol, con superficies sólidas y atmósferas variadas.
+- **Mercurio** sin atmósfera, **Venus** con efecto invernadero extremo.
+- La **Tierra**, único planeta con agua líquida y vida conocida.
+
+![](https://image.pollinations.ai/prompt/a%20photograph%20of%20the%20four%20inner%20planets%20aligned%2C%20showing%20their%20rocky%20surfaces%20and%20relative%20sizes%2C%20with%20the%20sun%20in%20the%20background?width=1024&height=768&nologo=true&seed=12035)
+
+
+---
+
+## Los Planetas Exteriores
+- **Gigantes gaseosos**: Júpiter y Saturno, compuestos principalmente de hidrógeno y helio.
+- **Gigantes de hielo**: Urano y Neptuno, con abundante agua, amoníaco y metano.
+- Caracterizados por anillos y numerosos satélites naturales.
+- **Júpiter**, el más grande, con la Gran Mancha Roja.
+
+![](https://image.pollinations.ai/prompt/a%20photograph%20of%20Jupiter%20and%20Saturn%20with%20their%20prominent%20rings%2C%20seen%20from%20deep%20space%2C%20with%20their%20moons%20visible?width=1024&height=768&nologo=true&seed=69117)
+
+
+---
+
+## Más Allá de Neptuno
+- El **Cinturón de Kuiper**: región de cuerpos helados, hogar de Plutón.
+- Nube de Oort: hipotética esfera de cometas de largo período que rodea el sistema solar.
+- **Planetas enanos**: Ceres, Plutón, Eris, Makemake y Haumea.
+- Restos de la formación del sistema solar.
+
+![](https://image.pollinations.ai/prompt/a%20realistic%20photo%20of%20several%20icy%20dwarf%20planets%20and%20comets%20in%20the%20Kuiper%20Belt%2C%20with%20faint%20distant%20stars?width=1024&height=768&nologo=true&seed=37905)
+
+
+---
+
+## Formación y Evolución
+- Origen hace aproximadamente 4.6 mil millones de años de una **nebulosa solar**.
+- Colapso gravitacional de una nube de gas y polvo.
+- Formación del Sol en el centro y **disco protoplanetario**.
+- Acreción de material para formar planetesimales y luego planetas.
+
+![](https://image.pollinations.ai/prompt/a%20realistic%20photo%20of%20a%20swirling%20protoplanetary%20disk%20with%20a%20young%20star%20at%20its%20center%2C%20surrounded%20by%20dust%20and%20gas%2C%20star%20formation?width=1024&height=768&nologo=true&seed=85917)
+
+
+---
+
+## Exploración Espacial
+- Misiones robóticas han revelado detalles de planetas y lunas.
+- **Voyager 1 y 2**: misiones interplanetarias que alcanzaron el espacio interestelar.
+- Mars rovers: búsqueda de vida pasada y presente en Marte.
+- Telescopios espaciales como **Hubble** y **Webb** expanden nuestra visión.
+
+![](https://image.pollinations.ai/prompt/a%20photograph%20of%20a%20Mars%20rover%20on%20the%20red%20Martian%20surface%2C%20with%20the%20planet%27s%20landscape%20in%20the%20background%20under%20a%20dusty%20sky?width=1024&height=768&nologo=true&seed=97614)
+
+
+---
+
+## Referencias
+<div class="references">
+<p>NASA. (2023). <em>Solar System Exploration</em>. <a href="https://solarsystem.nasa.gov/">https://solarsystem.nasa.gov/</a></p>
+<p>National Geographic. (2022). <em>The Solar System: A Complete Guide</em>. National Geographic Society. <a href="https://www.nationalgeographic.com/science/space/our-solar-system/">https://www.nationalgeographic.com/science/space/our-solar-system/</a></p>
+<p>De Pater, I., &amp; Lissauer, J. J. (2015). <em>Planetary Sciences</em>. Cambridge University Press.</p>
+<p>European Space Agency (ESA). (2023). <em>Our Solar System</em>. <a href="https://www.esa.int/Science<em>Exploration/Space</em>Science/Our<em>Solar</em>System">https://www.esa.int/Science<em>Exploration/Space</em>Science/Our<em>Solar</em>System</a></p>
+</div>
+</textarea>
+</section>
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css">
+<script>
+Reveal.initialize({ hash:true, slideNumber:'c/t', transition:'slide',
+  progress:true, controls:true, center:false,
+  plugins:[ RevealMarkdown, RevealHighlight ] }).then(function() {
+  // Pollinations (gratis) LIMITA rafagas: si las 6 imagenes se piden a la vez, casi
+  // todas fallan. Estrategia: NO cargar de golpe -> mover src a data-src y cargar solo
+  // la del slide visible (y la siguiente) al mostrarse. Reintento escalonado por si
+  // una falla (la 2a vez suele venir de cache, rapida). Markdown ![](url) no permite
+  // onerror inline, por eso se engancha aqui.
+  var imgs = document.querySelectorAll('.reveal .slides section img');
+  imgs.forEach(function(img) { img.dataset.src = img.src; img.removeAttribute('src'); });
+  function load(sec) {
+    if (!sec) return;
+    sec.querySelectorAll('img[data-src]').forEach(function(img) {
+      var url = img.dataset.src; img.removeAttribute('data-src');
+      var tries = 0;
+      img.addEventListener('error', function() {
+        if (tries++ < 6) { setTimeout(function() { img.src = ''; img.src = url; }, 1200 * tries); }
+        else { img.classList.add('img-failed'); }
+      });
+      img.src = url;
+    });
+  }
+  Reveal.on('slidechanged', function(e) { load(e.currentSlide); load(e.currentSlide.nextElementSibling); });
+  load(Reveal.getCurrentSlide());
+  load(document.querySelectorAll('.reveal .slides section')[1]);  // precargar el 1er contenido
+});
+</script>
+</body>
+</html>
